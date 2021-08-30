@@ -1,6 +1,6 @@
 # Dynamic Loader for Relocatable Object Files
 This is a dynamic loader for 64 bit relocatable object files. You can use your object file as a library and load it to memory then invoke functions from it.
-Unfortunately, it does not support the section dependecies, if your function uses variables that is not created in stack-frame then it will give you segmentation fault.
+Unfortunately, it does not support the section dependencies for now, if your function uses variables that is not created in stack-frame then it will give you segmentation fault.
 
 To use it, you need to define an ELF64 struct and then pass it to the mmap_file function with the object files name, then call init_elf64 function. After this, you can give the function name to get_function function. It will return you the function.
 
